@@ -1,0 +1,695 @@
+
+body{font-faSoully:"Soulcrosoft Yahei";
+     }
+/*top*/
+.top_t{width:100%;
+       height:55px;
+	  background:#f6f6f6;}
+.top{width:987px;
+     height:55px;
+	 margin:0 auto;
+	 }
+.top_1{width:987px;
+    height:50px;
+	background:#f6f6f6;}
+.top_1 .logo{display:block;
+             width:103px;
+			 height:39px;
+			 background:url(../Soulimg/logo.png) no-repeat left center;
+			 border-right:1px solid #cecece;
+			 margin-top:6px;}
+.top_1 a{text-decoration:none;
+         font-size:12px;
+		 color:#4a4a4a;
+		 display:block;}	 
+.top_1 .list_1{height:50px;
+               border-right:1px solid #cecece;
+			   }
+.top_1 .list_2{width:240px;}
+                              			 
+.top_1 .list_2 .a1,.a2,.a3{height:26px;
+                           margin:10px 0 14px 20px;
+						   line-height:26px;
+						   padding-left:30px;
+						   }			 
+.top_1 .list_2 .a1{background:url(../Soulimg/a1.png) no-repeat left center;}
+.top_1 .list_2 .a2{background:url(../Soulimg/a2.png) no-repeat left center;}
+.top_1 .list_2 .a3{background:url(../Soulimg/a3.png) no-repeat left center;}		 
+.top_1 .a4,.a5,.a6{height:50px;
+                   border-right:1px solid #cecece;
+				   line-height:50px;
+				   text-align:center;}			 
+.top_1 .a4{width:83px;
+           background:url(../Soulimg/jiantou.png) no-repeat 58px 24px;}		 
+.top_1 .a5{width:112px;
+           background:url(../Soulimg/jiantou.png) no-repeat 90px 24px;}
+.top_1 .a6{width:112px;
+           background:url(../Soulimg/jiantou.png) no-repeat 90px 24px;}				 
+.logo_bottom{width:100%;
+                  height:5px;
+				  background:url(../Soulimg/a4.png)  no-repeat center center;}			 
+		
+/*nav*/
+.bg{width:100%;
+    height:2460px;
+	background:url(../Soulimg/con_bg.jpg) no-repeat center top #1b1924;}	 
+.nav{width:987px;
+     height:551px;
+	 background:url(../Soulimg/header_main.jpg) center center no-repeat;
+	 margin:0 auto;}
+.nav .nav_top{width:987px;
+              height:108px;}
+.nav .nav_logo{width:190px;
+               height:100px;
+			   background:url(../Soulimg/logo.gif) no-repeat 0px 6px;}
+.nav .nav_r{height:30px;
+            margin-top:20px;
+			width:700px;}
+            			   			  			 
+.nav li .b1{display:block;
+            text-decoration:none;
+			margin:16px 15px 0 0;
+			height:30px;
+			width:64px;}
+.nav li .b4{display:block;
+            text-decoration:none;
+			margin:16px 0 0 0;
+			height:30px;
+			width:64px;}				 
+.nav li .b2{font-size:16px;
+                color:#d2dbfc;
+				text-align:center;}
+.nav li .b3{font-size:8px;
+                color:#d2dbfc;
+				text-align:center;}			 
+.r{width:34px;
+   height:122px;
+   position:fixed;
+   left:0px;
+   top:300px;
+   color:#f8fff3;
+   background:#c23a14;
+   font-size:22px;
+   line-height:22px;
+   text-align:center;
+   padding-top:8px;
+   text-decoration:none;}
+			 
+/*content_1*/	
+.content_1{width:987px;
+           height:1065px;
+		   background:url(../Soulimg/content.jpg) no-repeat center center;
+		   margin:0 auto;
+		   position:relative;}
+
+		 
+.c_nav{width:987px;
+      height:108px;
+	  }
+.c_nav .game{width:582px;
+             height:108px;
+			 }
+.c_nav .game .c1{width:214px;
+                 background:#d27c0b;
+				 text-decoration:none;
+				 text-align:center;
+				 padding-top:20px;
+				 display:block;
+				 height:88px;}			
+.c_nav .game .c1 .gl_1{font-size:36px;
+                       font-weight:bold;
+					   color:#fff;
+					   text-align:center;}			 
+.c_nav .game .c1 .gl_2{font-size:10px;
+                       font-weight:bold;			 
+			           color:#fff;
+					   text-align:center;}
+			 
+.c_nav .game .c2{width:92px;
+                 height:108px;
+				 background:url(../Soulimg/c1.png) no-repeat center center;
+				 display:block;}			 
+.c_nav .game .c3{width:92px;
+                 height:108px;
+				  display:block;
+				 background:url(../Soulimg/c2.png) no-repeat center center;}				 
+.c_nav .game .c4{width:92px;
+                 height:108px;
+				  display:block;
+				 background:url(../Soulimg/c3.png) no-repeat center center;}				 
+.c_nav .game .c5{width:92px;
+                 height:108px;
+				  display:block;
+				 background:url(../Soulimg/c4.png) no-repeat center center;}				 
+.c_nav .gr{width:405px;
+           height:108px;
+		   }			 
+.c_nav .gr .gr_1{width:405px;
+                 background:url(../Soulimg/sever.png) no-repeat center center;		 
+			     height:64px;
+				 margin-bottom:1px;}
+.c_nav .gr .gr_2{width:405px;
+                 background:url(../Soulimg/c5.png) no-repeat left top;		 
+			     height:64px;
+				 }			 
+			 
+.c_nav .gr .gr_2 .gr_3{font-size:12px;
+                       color:#adb9e0;
+					   height:42px;
+					   line-height:42px;
+					   padding-left:5px;
+					   background:url(../Soulimg/c6.png) no-repeat 170px 15px;}			 
+.c_nav .gr .gr_2 .gr_3 a{font-size:12px;
+                          color:#f93d1a;
+						  }			 
+			 
+.c_b{width:987px;
+     height:303px;
+	 margin:0 auto;}
+.c_b .c_bl{width:582px;
+           height:303px;
+		   background:url(../Soulimg/c7.png) no-repeat center center;
+		   position:absolute;}	 			 
+.c_b .c_bl .c_bl1{width:16px;
+                   height:34px;
+				   border:1px solid #3e4661;
+				   background:#272c3e;
+				   border-radius:11px;
+				   font-size:14px;
+				   padding:14px 4px;
+				   color:#0ac0d0;
+				   position:absolute;
+				   left:10px;
+				   top:10px;
+				   text-decoration:none;}
+ .c_b .c_bl .c_bl2{width:16px;
+                   height:34px;
+				   border:1px solid #3e4661;
+				   background:#272c3e;
+				   border-radius:11px;
+				   font-size:14px;
+				   padding:14px 4px;
+				   color:#0ac0d0;
+				   position:absolute;
+				   left:10px;
+				   top:83px;
+				   text-decoration:none;}
+.c_b .c_br{width:405px;
+           height:303px;
+		   
+		   position:relative;}                   		 
+.c_b .c_br .c_br1{width:405px;
+                   height:56px;
+		           background:url(../Soulimg/c8.png) no-repeat left center;}
+.c_b .c_br .c_br1 .c6,.c7{width:93px;
+                      height:56px;
+					  text-align:center;
+					  line-height:56px;
+					  color:#fff;
+					  font-weight:bold;
+					  text-decoration:none;
+					  font-size:12px;
+					  display:block;}		   			 
+.c_b .c_br .c_br1 .c7{background:url(../Soulimg/c9.png) no-repeat center center;
+                      width:95px;}			 
+.c_b .c_br .c_br2{width:381px;
+                  height:247px;
+				  background:#322e3f;
+				  }			 
+			 
+.c_b .c_br .c_br2 dt{height:42px;
+                     width:381px;
+					padding-top:17px;}			 
+.c_b .c_br .c_br2 dt a{display:block;
+                       text-decoration:none;
+					   font-size:16px;
+					   color:#ff4606;
+					   background:url(../Soulimg/c10.png) no-repeat 17px 0px;
+					   padding-left:58px;
+					   height:30px;
+					   padding-top:6px;
+					   width:381px;}
+.c_b .c_br .c_br2 dd a{display:block;
+                       text-decoration:none;
+					   font-size:13px;
+					   color:#8ea7ca;
+					   line-height:25px;
+					   margin-left:25px;
+					   width:340px;}					   
+.c_b .c_br .c_br2 dd i{font-size:13px;
+					   color:#8ea7ca;
+					   }					   			 
+.c_b .c_br .c_br2 .c8{text-align:right;}
+                     		 
+/*content_2*/
+.content_2{width:987px;
+           height:132px;
+		   margin:28px 0;}				 
+.content_2 .d1{width:987px;
+           height:132px;}			 
+			 
+.content_2 .d1 .d2{width:239px;
+                   height:130px;
+				   border:1px solid #433b4f;
+				   background:url(../Soulimg/d1.jpg) no-repeat center center;
+				   display:block;}			 
+.content_2 .d1 .d3{width:239px;
+                   height:130px;
+				   border:1px solid #433b4f;
+				   background:url(../Soulimg/d2.jpg) no-repeat center center;
+				   display:block;}			 
+
+.content_2 .d1 .d4{width:239px;
+                   height:130px;
+				   border:1px solid #433b4f;
+				   background:url(../Soulimg/d3.jpg) no-repeat center center;
+				   display:block;}			 
+.content_2 .d1 .d5{width:239px;
+                   height:130px;
+				   border:1px solid #433b4f;
+				   background:url(../Soulimg/d1.jpg) no-repeat center center;
+				   display:block;}			 
+			 
+/*content_3*/
+.content_3{width:964px;
+           height:342px;
+		   
+		  }			 
+.content_3 .e1{width:655px;
+               height:342px;
+			   border:1px solid #433b4f;
+			   background:url(../Soulimg/e3.png) no-repeat	center 58px; }			 
+			 
+.content_3 .e1 .e3{widrh:655px;
+                   height:57px;
+				   background:url(../Soulimg/e1.png) no-repeat	center center;
+				   position:relative;}		 
+.content_3 .e1 .e3 .e4{width:113px;
+                       height:59px;
+					   background:url(../Soulimg/e2.png) no-repeat	center center;
+					   position:absolute;
+					   left:438px;
+					   top:0px;}
+.content_3 .e2{width:307px;
+               height:344px;
+			   }					   		  
+.content_3 .e2 .e5{width:264px;
+                   height:44px;
+				   font-size:18px;
+				   color:#f3b464;
+				   background:url(../Soulimg/e4.png) no-repeat left 0px;
+				   padding-left:43px;}			 
+.content_3 .e2 .e6{width:307px;
+			       height:149px;
+				   border:1px solid #433b4f;
+				   background:url(../Soulimg/e5.png) no-repeat left 0px;
+				   position:relative;}
+			 
+.content_3 .e2 .e6 .e7{width:307px;
+                       position:absolute;
+					   left:0px;
+					   bottom:0px;}
+.content_3 .e2 .e6 .e7 .opa{width:307px;
+                            background:#000;
+							opacity:0.5;
+							position:absolute;
+							left:0px;
+					        bottom:0px;
+							height:100%;}
+ .content_3 .e2 .e6 .e7 .e8{width:307px;
+                            position:relative;
+							height:36px;}
+                            			 
+ .content_3 .e2 .e6 .e7 .e8 .text1{font-size:12px;
+                                   color:#fff;
+								   position:relative;
+								   line-height:36px;
+								   }			 
+.content_3 .e2 .e6 .e7 .e8 .text2{font-size:12px;
+                                   color:#a997c3;
+								   position:relative;
+								   line-height:36px;
+								   }					 
+.content_3 .e10{padding-top:10px;}
+.content_3 .e9{width:309px;
+               height:25px;
+			   background:url(../Soulimg/e6.png) no-repeat center center;
+			   margin-bottom:3px;}			 
+.content_3 .e9 a{text-decoration:none;
+                 font-size:12px;
+				 color:#a6b2d8;
+				 padding-left:10px;
+				 display:block;
+				 width:290px;
+				 line-height:25px;}			 
+			 
+.content_3 .e9 i{font-size:12px;
+				 color:#a6b2d8;}			 
+			 
+			 
+/*content_4*/			 
+.content_4{width:964px;
+           height:759px;
+		   background:url(../Soulimg/bg1.png) repeat-x;
+		   margin:30px auto;
+		   padding-right:23px;}			 
+.c_4l{width:215px;
+     height:759px;
+	 background:ccc;
+	 }
+.c_4l .f1{width:215px;
+          height:189px;
+		  background:url(../Soulimg/f1.png) no-repeat center center;
+		  margin-bottom:23px;}
+.c_4l .f1 dt{width:215px;
+             height:41px;
+			 font-size:16px;
+			 color:#be6b42;
+			 text-align:center;
+			 line-height:41px;
+			 margin-bottom:22px;}
+.c_4l .f1 dd{width:86px;
+             height:14px;
+			 padding-left:20px;
+			 margin-bottom:15px;
+			 }
+.c_4l .f1 dd a{text-decoration:none;
+               color:#9587ab;
+			   font-size:14px;}
+.c_4l .f2{width:215px;
+              height:262px;
+			  display:block;
+			  background:url(../Soulimg/main_a3_3.jpg) no-repeat center center;}			   			.c_4l .f3{width:215px;
+		  height:35px;
+		  border:6px solid #322b3c;
+		  background:#19181d;
+		  font-size:16px;
+		  color:#a295b7;
+		  padding-left:55px;
+		  outline:none;}
+.c_4l .f4{ width:215px;
+           height:241px;
+		   display:block;
+		   background:url(../Soulimg/f2.png) no-repeat center center;}	 			 
+.c_4m{width:425px;
+     height:759px;
+	 background:ccc;
+	 }
+.c_4m .f5{width:377px;
+          height:41px;
+		  font-size:20px;
+		  color:#f3ca90;
+		  background:url(../Soulimg/f3.png) no-repeat 0px 0px;
+		  padding-left:48px;}
+.c_4m .f6{width:425px;
+          height:46px;}
+.c_4m .f7,.f9{width:102px;
+              height:44px;
+			  border:1px solid #433b4f;
+			  text-align:center;
+			  line-height:44px;
+			  }
+.c_4m .f7 a{text-decoration:none;
+                  color:#7795b7;
+			      font-size:12px;}
+.c_4m .f9 a{text-decoration:none;
+                  color:#7795b7;
+			      font-size:12px;}
+.c_4m .f9{border:none;
+              height:45px;
+			  width:113px;
+              border-bottom:1px solid #433b4f;}
+.c_4m .f8 a{text-decoration:none;
+              color:#fff;
+			  font-size:12px;}
+.c_4m .f8{ line-height:45px;
+			  height:45px;
+			  width:102px;
+			  text-align:center;
+			  background:#322b3c;
+			  border:1px solid #433b4f;
+			  border-bottom:none;}
+.c_4m .f10{width:424px;
+           height:254px;
+		   border:1px solid #433b4f;
+		   border-top:none;
+		   
+		   background:#322b3c;}
+.c_4m .f11{width:105px;
+           height:197px;
+		   border:1px solid #433b4f;
+		   background:url(../Soulimg/f8.png) no-repeat 0px 0px;
+		   margin-left:23px;
+		   margin-top:15px; }
+.c_4m .f112{width:107px;
+           height:199px;
+		   border:1px solid #433b4f;
+		   background:url(../Soulimg/1031.jpg) no-repeat 0px 0px;
+		   margin-left:23px;
+		   margin-top:15px; }
+.c_4m .f12{width:229px;
+           margin-top:15px;
+		    margin-left:14px;}
+.c_4m .f12 li{height:15px;
+              margin-bottom:10px;}
+.c_4m .f12 li a{font-size:14px;
+                color:#7795b7;
+				text-decoration:none;}
+.c_4m .f13{width:377px;
+          height:41px;
+		  font-size:20px;
+		  color:#f3ca90;
+		  background:url(../Soulimg/f4.png) no-repeat 0px 0px;
+		  padding-left:48px;
+		  margin-top:36px;}				             						  		  	 			 
+.c_4r{width:322px;
+     height:759px;
+	 background:ccc;}			 
+.c_4r .f14{width:322px;
+          height:41px;
+		  font-size:20px;
+		  color:#f3ca90;
+		  background:url(../Soulimg/f5.png) no-repeat 0px 0px;
+		  padding-left:48px;}		 
+.c_4r .f15{width:289px;
+           height:299px;
+		   border:1px solid #433b4f;
+		   padding-left:32px;} 			 
+.c_4r .f16{width:261px;
+           height:26px;
+		   border-bottom:1px dotted #433b4f;
+		   padding:14px 0;}			 
+.c_4r .f17{width:70px;
+           height:25px;
+		   display:block;
+		   background:#594f67;
+		   font-size:12px;
+		   text-decoration:none;
+		   color:#fff;
+		   text-align:center;
+		   line-height:25px;
+		   position:relative;
+		    margin-right:18px;}			 
+.c_4r .f17 i{width:8px;
+             height:11px;
+			 display:block;
+			 position:absolute;
+			 left:70px;
+			 top:6px;
+			  background:url(../Soulimg/f6.png) no-repeat 0px 0px;}			 
+.c_4r .f19{text-decoration:none;
+           font-size:12px;
+		   color:#9587ab;
+		   }			 
+			 
+.c_4r .f20{width:80px;
+           height:25px;
+		   display:block;
+		   background:#594f67;
+		   font-size:12px;
+		   text-decoration:none;
+		   color:#fff;
+		   text-align:center;
+		   line-height:25px;
+		   position:relative;
+		    margin-right:18px;}				 
+.c_4r .f20 i{width:8px;
+             height:11px;
+			 display:block;
+			 position:absolute;
+			 left:80px;
+			 top:6px;
+			  background:url(../Soulimg/f6.png) no-repeat 0px 0px;}				 
+			 
+.c_4r .f21{width:261px;
+           height:38px;
+		   border:3px solid #4b3f5c;
+		   display:block;
+		   margin-top:15px;
+		   text-decoration:none;
+		   text-align:center;
+		   line-height:38px;
+		   font-size:20px;
+		   color:#b1a1ca;
+		   }			 
+.c_4r .f22{width:377px;
+          height:41px;
+		  font-size:20px;
+		  color:#f3ca90;
+		  background:url(../Soulimg/f7.png) no-repeat 0px 0px;
+		  padding-left:48px;
+		  margin-top:36px;}				 
+			 
+.c_4r .f23{width:322px;
+          height:46px;}			 
+.c_4r .f23 .f24,.f25{width:102px;
+              height:44px;
+			  border:1px solid #433b4f;
+			  text-align:center;
+			  line-height:44px;
+			  }			 
+.c_4r .f25 a{text-decoration:none;
+                  color:#7795b7;
+			      font-size:12px;}
+.c_4r .f26 a{text-decoration:none;
+                  color:#7795b7;
+			      font-size:12px;}
+.c_4r .f26{border:none;
+              height:45px;
+			  width:113px;
+              border-bottom:1px solid #433b4f;
+			  text-align:center;
+			  line-height:44px;}
+.c_4r .f24 a{text-decoration:none;
+              color:#fff;
+			  font-size:12px;}
+.c_4r .f24{ line-height:45px;
+			  height:45px;
+			  width:102px;
+			  text-align:center;
+			  background:#322b3c;
+			  border:1px solid #433b4f;
+			  border-bottom:none;}			 
+.c_4r .f27{width:305px;
+           height:234px;
+		   border:1px solid #433b4f;
+		   border-top:none;
+		   padding-top:20px;
+		   padding-left:15px;}
+.c_4r .f28{width:137px;
+           height:90px;
+		   margin-right:20px;
+		   margin-bottom:20px;
+		    display:block;
+		   background:url(../Soulimg/m5-1.jpg) no-repeat center center;}           			 
+.c_4r .f29{width:137px;
+           height:90px;
+		    display:block;
+			margin-bottom:20px;
+		   background:url(../Soulimg/m5-2.jpg) no-repeat center center;}			 
+			 
+.c_4r .f30{width:137px;
+           height:90px;
+		    display:block;
+			margin-right:20px;
+		   background:url(../Soulimg/m5-3.jpg) no-repeat center center;}			 
+			 
+.c_4r .f31{width:137px;
+           height:90px;
+		   display:block;
+		   background:url(../Soulimg/m5-4.jpg) no-repeat center center;}			 
+/*bottom*/			 
+			 
+.bottom_1{width:892px;
+        height:16px;
+		background:url(../Soulimg/game_anc.jpg) no-repeat center center;
+		margin-left:40px;
+		padding-top:6px;
+		text-align:center;
+		font-size:15px;
+		color:#9587ab;}			 
+.bottom_2{width:892px;
+        height:16px;
+		
+		margin-left:40px;
+		padding-top:6px;
+		text-align:center;
+		font-size:15px;
+		color:#4b5763;}			 
+.bottom_3{width:892px;
+        height:16px;
+		margin-bottom:32px;
+		margin-left:40px;
+		padding-top:6px;
+		text-align:center;
+		font-size:15px;
+		color:#4b5763;}				 
+.bottom_4{width:100%;
+          height:10px;
+		  background:url(../Soulimg/bottom_bg.png) no-repeat center center;}			 
+.bottom_5{width:100%;
+          height:80px;
+		  background:#181818;
+		  padding-top:18px;}			 
+.bottom_5 .bottom_6{width:987;
+          height:98px;
+		  background:#181818;
+		  padding-left:250px;}			 
+.bottom_7{width:156px;
+          height:55px;
+		  background:url(../Soulimg/bottom1.png) no-repeat 0px 0px;
+		  margin-right:15px;}			 
+.bottom_9{font-size:12px;
+          color:#535353;
+		  padding-top:5px;
+		  margin-bottom:10px;}			 
+.bottom_10{font-size:12px;
+          color:#767676;}			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 

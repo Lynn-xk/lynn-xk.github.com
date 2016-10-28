@@ -20,7 +20,7 @@
         </div>
         <div class="num"></div>
  -->    
-        <video src="img/homevideo.mp4" loop autoplay></video>
+        <video src="image/homevideo.mp4" loop autoplay></video>
         <div class="name">
             <div class="namein"></div>
         </div>
@@ -36,7 +36,7 @@
     <div class="father">
      <!-- Header -->
      <div class="fix"></div>
-     <div class="header">
+     <div class="header" id="home">
      	<div class="navigation">
      		<div class="navigationbar">
                 <div class="logo1"></div>
@@ -48,11 +48,11 @@
 	     			<a class="logo">Personal Website</a>
 	     			<i class="show_navigation"></i>
 	     			<ul class="navigation_right">
-	     				<li>HOME<a href="">HOME</a></li>
-	     				<li>ABOUT<a href="">ABOUT</a></li>
-	     				<li>PRODUCTS<a href="">PRODUCTS</a></li>
-                        <li>GAMES<a href="">GAMES</a></li>
-	     				<li>CONTACT<a href="">CONTACT</a></li>
+	     				<li>HOME<a href="#home">HOME</a></li>
+	     				<li>ABOUT<a href="#about">ABOUT</a></li>
+	     				<li>PRODUCTS<a href="#products">PRODUCTS</a></li>
+                        <li>GAMES<a href="#games">GAMES</a></li>
+	     				<li>CONTACT<a href="#contact">CONTACT</a></li>
 	     				<!-- <li><span class="show_close">×</span></li> -->
 	     			</ul>
      			</div>
@@ -63,7 +63,7 @@
             </h1>
      		<p class="header_decoration_replay_up">Cease to struggle</p> 
             <p class="header_decoration_replay_down">and you cease to live</p>		
-        <a href="#service" title="Go down">
+        <a href="javascript:;" title="Go down" id="center">
           <img  src="image/button_downr.png" alt="MaterialUp" class=" center " >
         </a>
         <div class="upbutton">
@@ -73,27 +73,27 @@
      <input type="button" value="" id="btn" />
      <div class="wrap" id="wrap">
         <h3><!-- Personal Website --></h3>
-        <div>
-            <span>HOME</span>
+        <!-- <div>
+            <a href="#home">HOME</a> -->
              <div>
-                <span>ABOUT</span>
+                <a href="#about">ABOUT</a>
                  <div>
-                    <span>PRODUCES</span>
+                    <a href="#products">PRODUCES</a>
                      <div>
-                        <span>GAMES</span>
+                        <a href="#games">GAMES</a>
                          <div>
-                            <span>CONTACT</span>
+                            <a href="#contact">CONTACT</a>
                              
                          </div>
                      </div>
                  </div>
              </div>
-         </div>
+        <!--  </div> -->
      </div>
 
      <!-- body1 -->
 
-     <div class="about">
+     <div class="about" id="about">
          <div class="opacity1">
              <p class="active cont1_title">
                 <span class="lilogo"></span>
@@ -137,16 +137,72 @@ I majored in PC port, Android and IOS port front end development.I love front pa
          </div>
      </div>
     <!-- body2 -->
-    <div class="products">
+    <div class="products" id="products">
         <div class="opacity1">
 
             <p class="cont1_title">
             <span class="lilogo"></span>
             PRODUCTS</p>
         </div>
-        <div class="body_content2"></div>
+        <div class="body_content2">
+            <div class="cancer">
+                <img src="image/pangxie2.png" alt="">
+                <a href="javascript:;" class="star"></a>
+            </div>
+            <div class="lion">
+                <img src="image/lion2.png" alt="">
+                <a href="javascript:;" class="star"></a>
+            </div>
+            <div class="tianping">
+                <img src="image/tianping.png" alt="">
+                <a href="javascript:;" class="star"></a>
+            </div>
+            <!-- <div class="sheshou">
+                <img src="image/sheshou.png" alt="">
+                <a href=""></a>
+            </div> -->
+            <div class="xiezi">
+                <img src="image/xiezi.png" alt="">
+                <a href="javascript:;" class="star"></a>
+            </div>
+            <div class="contbg">
+                <img src="image/gamebg2.png" alt="">
+                <div class="protitle">
+                    <div class="protit">
+                        <ul>
+                            <li>Floading Fan</li>
+                            <li>Echo Of Soul</li>
+                            <li>MI.Websit</li>
+                            <li>3D Picture</li>
+                        </ul>
+                    </div>
+                    <div class="prop">
+                        <ul >
+                            <li>
+                               <img src="image/3Dpicture.jpg" alt="">
+                               <a href="3Dpicture.html" target="_blank"></a>
+                            </li>
+                            <li>
+                                <img src="image/timg.jpg" alt="">
+                                <a href="Mi.html" target="_blank"></a>
+                            </li>
+                            <li>
+                                <img src="image/soul.jpg" alt="">
+                                <a href="Soul.html" target="_blank"></a>
+                            </li>
+                            <li>
+                                <img src="image/shanzi.jpg" alt="">
+                                <a href="fan.html" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
     </div>
-    <div class="games">
+    <div class="games" id="games">
         <div class="opacity1">
 
             <p class="cont1_title">
@@ -156,7 +212,7 @@ I majored in PC port, Android and IOS port front end development.I love front pa
         <div class="body_content4"></div>
     </div>
     <!-- footor -->
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="opacity1">
             <p class="cont1_title">
             <span class="lilogo"></span>

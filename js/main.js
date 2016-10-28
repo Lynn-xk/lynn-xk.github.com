@@ -10,6 +10,7 @@ window.onload = function(){
 	var oName = document.querySelector('.namein');
 	var oEng1 = document.querySelector('.english1');
 	var oEng2 = document.querySelector('.english2');
+	var oCent = document.querySelector('#center')
 	var num = 450;
 	var loadtimer = null;
 
@@ -45,7 +46,7 @@ window.onload = function(){
 			backLoad();
 		}
 
-	},10)
+	},0.1)
 
 	function backLoad(){
 		//回到顶部
@@ -70,12 +71,30 @@ window.onload = function(){
 		//导航条
 		window.onscroll = function(){
 			var navtop = document.documentElement.scrollTop || document.body.scrollTop;
-			if(navtop>=50){
-				oNav.style.opacity = 0;	
+			
+			if(navtop>=100){
+				oNav.style.transition = '1s opacity ease';
+				oNav.style.opacity = '0';
+				oNav.addEventListener('transitionend',function(){
+						oNav.style.display = 'none';
+				},false)
+				oNav.removeEventListener('transitionend',function(){
+						oNav.style.display = 'none';
+				},false)
+					
 			}else{
-				oNav.style.opacity = 1;
+				
+				oNav.style.transition = '1s opacity ease';
+				oNav.style.opacity = '1';	
+				oNav.style.display = 'block';
+				oNav.addEventListener('transitionend',function(){
+					oNav.style.display = 'block';
+				},false)
+				oNav.removeEventListener('transitionend',function(){
+					oNav.style.display = 'block';
+				},false)
 			}
-			oNav.style.transition = '1s opacity ease';
+			
 			if(navtop>600){
 				oBtn.style.right ='20px';
 				oUp.style.right = 0;
@@ -102,7 +121,7 @@ window.onload = function(){
 			}
 			if(navtop>823 && navtop<=1646){
 				oFix.style.background='url(image/st.jpg) no-repeat';}
-			if(navtop>0 && navtop<=623){
+			if(navtop>0 && navtop<=623 || navtop == 643){
 				oCont1.style.left = 50+'px';
 				oCont1.style.transition='1s left cubic-bezier(1, 1.96, 0.65, 0.43)';
 				oPc.style.right = 660+'px';
@@ -142,13 +161,25 @@ window.onload = function(){
 			 }
 			
 		}
-
+		//center按钮
+			oCent.onclick = function(){
+				var k = 0;
+				var timerk = setInterval(function(){
+					k+=15;
+					document.body.scrollTop = k;
+					if(k == 645){
+						clearInterval(timerk)
+					}
+				},30)
+				
+				
+			}
 		//折纸侧边导航
 
 			var oBtn=document.getElementById("btn");
 			var oWrap=document.getElementById("wrap");
 			var aDiv=oWrap.getElementsByTagName("div");
-			var aSpan=oWrap.getElementsByTagName("span");
+			var aSpan=oWrap.getElementsByTagName("a");
 			var i=0;
 			var oTimer=null;
 			var iDelay=200;
@@ -186,9 +217,42 @@ window.onload = function(){
 				}
 				Boff=!Boff;
 			};
+
+			//星座
+			var aStar = document.querySelectorAll('.star');
+			var oContbg = document.querySelector('.contbg');
+			var oProtit = document.querySelector('.protit ul');
+			var oProp = document.querySelector('.prop ul');
+			var aNa =  document.querySelectorAll('.prop a');
+			var aPli = oProtit.children;
+			// var aPimg = document.querySelectorAll('.prop li');
+			for(var i = 0;i<aStar.length;i++){
+				aStar[i].index = i;
+				aStar[i].onclick = function(){
+					oContbg.style.opacity = 1;
+					oContbg.style.transition = '1.6s opacity ease';
+					
+					oProtit.style.right = (this.index*-177)+'px';
+					oProtit.style.transition = '1s all ease';
+					oProp.style.left = (this.index*-276)+'px';
+					oProp.style.transition = '1s all ease';
+					oContbg.addEventListener('transitionend',function(){
+						for(var j = 0;j<aNa.length;j++){
+							aNa[j].style.display = 'block';
+						}
+					},false)
+					oContbg.removeEventListener('transitionend',function(){
+						for(var j = 0;j<aNa.length;j++){
+							aNa[j].style.display = 'block';
+						}
+					},false)
+				}
+				
+			}
+
+
+
+    //backLoad函数结尾
 	}
-
-	
-
-	
+//window.onload函数结尾 
 }

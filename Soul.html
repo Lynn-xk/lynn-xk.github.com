@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Soul</title>
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/index1.css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/move.js"></script>
+
+<script>
+window.onload = function(){
+  var oCbl1 = document.getElementById('cbl1');
+  var oCbl2 = document.getElementById('cbl2');
+  var oBox = document.getElementById('c_bl');
+  var aLi = oCbl1.children;
+  var aBtn = oCbl2.children;
+  var iNow = 0;
+  var timer = null;
+  timer = setInterval(next,2000)
+  for(var i = 0;i<aBtn.length;i++){
+      aBtn[i].index = i;
+      aBtn[i].onclick = function(){
+          iNow = this.index;
+          tab()
+      }
+      aBtn[i].onmouseover = function(){
+          clearInterval(timer)
+      };
+      aBtn[i].onmouseout = function(){
+          timer = setInterval(next,2600)
+      };
+      aLi[i].children[0].onmouseover = function(){
+         clearInterval(timer)
+      }
+      aLi[i].children[0].onmouseout = function(){
+         timer = setInterval(next,2600)
+      }
+  };
+
+  function tab(){
+      for(var i=0;i<aBtn.length;i++){
+          aBtn[i].className = '';
+      };
+      aBtn[iNow].className ='on';
+      move(oCbl1,{'left':-iNow*582},{'duration':1200})
+  };
+  function next(){
+      iNow++;
+      if(iNow>=aBtn.length){
+        iNow = 0;
+      }
+      tab();
+  }
+    function Tab(id,cn1,cn2,sEv){
+        var oBox = document.getElementById(id);
+        var aInput = oBox.getElementsByTagName(cn1);
+        var aDiv = oBox.getElementsByTagName(cn2);
+
+        for(var i=0;i<aInput.length;i++){
+          aInput[i].index = i;
+          aInput[i][sEv] = function(){
+              for(var j=0;j<aInput.length;j++){
+                aInput[j].className = '';
+                aDiv[j].style.display = 'none';
+              };
+              this.className = 'active';
+              aDiv[this.index].style.display = 'block';
+          }
+        }
+    };
+    Tab('e3','li','div','onclick');
+    Tab('f6','li','div','onclick');
+    Tab('f7','li','div','onclick');
+    Tab('e2','a','div','onmouseover');
+    Tab('c_br','li','dl','onclick');
+}
+$(function(){
+  $.ajax({
+    url:'data.txt',
+    success:function(str){
+      var arr = eval('('+str+')');
+      $.each(arr,function(index,json){
+         $('.c_br').append('<dl class="c_br2"><dt><a class="fl" href="#">4月8日大版开启 新职业术士魔神天降</a></dt></dl>')
+          var arr2 = json.title
+          $.each(arr2,function(index1,json){
+            $('.c_br2').eq(index).append('<dd><a class="fl" href="javascript:;">'+arr2[index1]+'</a></dd><dd><a class="fl" href="javascript:;">')
+           
+          })
+
+      })
+      $('.c_br2:gt(0)').hide();
+      $('.c_br1 li:first').addClass('active')
+     
+    }
+  });
+ 
+  $('#f4').mouseover(function() {
+      $('#f4 img').stop().animate({
+        'left':-215
+      },800,'swing')
+  });
+  $('#f4').mouseout(function() {
+      $('#f4 img').stop().animate({
+        'left':0
+      },800)
+  });
+  
+})
+</script>
+
+
+</head>
+
+<body>
+
+
+<!--top-->
+<div class="top_t">
+     <div class="top">
+      <div class="top_1 clearfix"> 
+         <a class="logo fl" href="#"></a>
+         <ul class="fr">
+            <li class="list_1 fl">
+               <ul class="list_2 clearfix">
+                   <li><a class="a1 fl" href="#">注册</a></li>
+                   <li><a class="a2 fl" href="#">充值</a></li>
+                   <li><a class="a3 fl" href="#">畅游+</a></li>
+               </ul>
+            </li>
+            <li class="a4 fl"><a href="#">客服</a></li>
+            <li class="a5 fl"><a href="#">畅游全服务</a></li>
+            <li class="a6 fl"><a href="#">畅游全游戏</a></li>
+         </ul>
+      </div>
+      
+    </div>
+   </div>
+<div class="logo_bottom">
+      </div>
+<!--nav-->
+<div class="bg">
+   <div class="nav">
+       <div class="nav_top clearfix">
+           <div class="nav_logo fl">
+           </div>
+           <ul class="nav_r fr" id="nav_r fr">
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">首页</p>
+                     <p class="b3">HOME</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">新闻公告</p>
+                     <p class="b3">NEWS</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">游戏特色</p>
+                     <p class="b3">FEATURES</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">新手指南</p>
+                     <p class="b3">NEWBIE</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">游戏下载</p>
+                     <p class="b3">DOWNLOAD</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">活动专区</p>
+                     <p class="b3">ACTIVITY</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">视觉欣赏</p>
+                     <p class="b3">VIDEO & PICTURE</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b1" href="#">
+                     <p class="b2">玩家互动</p>
+                     <p class="b3">INTERACTION</p>
+                     <div></div>
+                 </a>
+              </li>
+              <li class="fl">
+                 <a class="b4" href="#">
+                     <p class="b2">客户服务</p>
+                     <p class="b3">SERVICE</p>
+                     <div></div>
+                 </a>
+              </li>
+           </ul>
+
+       </div>
+   </div>
+ <a href="#" class="r">点赞赢豪礼</a>
+
+<!--content_1-->
+<div class="content_1">
+
+  <div class="c_nav clearfix">
+     <ul class="fl game">
+        <li class="fl"><a class="c1" href="#">
+
+        </a></li>
+        <li class="fl"><a class="c2" href="#"></a></li>
+        <li class="fl"><a class="c3" href="#"></a></li>
+        <li class="fl"><a class="c4" href="#"></a></li>
+        <li class="fl"><a class="c5" href="#"></a></li>
+     </ul>
+     <div class="gr fl">
+        <div class="gr_1">
+        </div>
+        <div class="gr_2">
+          <p class="gr_3">据您上次访问有<a href="#">200</a>200条更新</p>
+        </div>
+        
+     </div>
+  </div>
+  <div class="c_b clearfix">
+     <div class="c_bl fl" id="c_bl">
+         <a href="#" class="c_bl1">官方</a>
+         <a href="#" class="c_bl2">媒体</a>
+         <ul id="cbl1" class="cbl1">
+           <li><img src="soulimg/main_a1 (1).jpg" alt="" /></li>
+           <li><img src="soulimg/main_a1 (2).jpg" alt="" /></li>
+           <li><img src="soulimg/main_a1 (3).jpg" alt="" /></li>
+           <li><img src="soulimg/main_a1 (4).jpg" alt="" /></li>
+           <li><img src="soulimg/main_a1 (5).jpg" alt="" /></li>
+         </ul>
+         <ul id="cbl2">
+           <li class="on"></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+         </ul>
+     </div>
+     <div class="c_br fr" id="c_br">
+        <ul class="c_br1">
+           <li class=""><a class="c9" href="javascript:;">综合</a></li>
+           <li class=""><a class="c9" href="javascript:;">新闻</a></li>  
+           <li class=""><a class="c9" href="javascript:;">公告</a></li>
+           <li class=""><a class="c9" href="javascript:;">媒体</a></li>
+        </ul>
+        <!-- <dl class="c_br2" id="c13">
+                    <dt><a class="fl" href="#">4月8日大版开启 新职业术士魔神天降</a></dt> -->
+                    <!-- <dd><a class="fl" href="#">【综合】两大满级副本特色揭秘 中级BOSS曝光<i class="fr">03/24</i></a></dd>
+                    <dd><a class="fl" href="#">【综合】解密术士进化史 多张设计稿曝光<i class="fr">03/24</i></a></dd>
+                    <dd><a class="fl" href="#">【综合】竞技场上线！进去PVP激斗时代！<i class="fr">03/24</i></a></dd>
+                    <dd><a class="fl" href="#">【综合】天降魔神！新职业术士多图曝光<i class="fr">03/24</i></a></dd>
+                    <dd><a class="fl" href="#">【综合】4月8日大版开启 新职业术士魔神天降<i class="fr">03/24</i></a></dd>
+                    <dd><a class="fl" href="#">【综合】萌属性报表！大神手绘同人图大放送<i class="fr">03/24</i></a></dd>
+                    <dd class="c8"><a href="#">更多信息></a></dd> -->
+               <!--  </dl> -->
+               
+     </div>
+  </div>
+
+
+<!--content_2-->
+  <div class="content_2">
+     <ul class="d1 clearfix">
+        <li class="fl"><a class="d2" href="#"></a></li>
+        <li class="fl"><a class="d3" href="#"></a></li>
+        <li class="fl"><a class="d4" href="#"></a></li>
+        <li class="fl"><a class="d5" href="#"></a></li>
+     </ul>
+  </div>
+
+<!--content_3-->
+<div class="content_3 clearfix">
+   <div id="e1" class="fl">
+      <div class="e3" id="e3">
+        <ul class="e11 clearfix">
+            <li class="active"><a class="e12" href="javascript:;"></a></li>
+            <li class=""><a class="e13" href="javascript:;"></a></li>
+            <li class=""><a class="e14" href="javascript:;"></a></li>
+            <li class=""><a class="e15" href="javascript:;"></a></li>
+            <li class=""><a class="e16" href="javascript:;"></a></li>
+            <li class=""><a class="e17" href="javascript:;"></a></li>
+        </ul>
+        <div class="mm1"></div>
+        <div class="mm2"></div>
+        <div class="mm3"></div>
+        <div class="mm4"></div>
+        <div class="mm5"></div>
+        <div class="mm6"></div>
+       
+      </div>
+   </div>
+   <div class="e2 fr" id="e2">
+      <h2 class="e5">活动中心</h2>
+      <a href="#">神谕者的成长礼<i class="fr">进行中</i></a>
+      <div class="e6" style="display: block;">
+        <span class="e7">
+           <span class="opa"></span>
+             <span class="e8 clearfix">
+              <p class="text1 fl">女武神的秘宝</p>
+              <p class="text2 fr">共7,294,712人关注</p>
+            </span>     
+        </span>
+      </div>
+      <a href="#">每日登陆有惊喜<i class="fr">进行中</i></a>
+      <div class="e6">
+        <span class="e7">
+           <span class="opa"></span>
+             <span class="e8 clearfix">
+              <p class="text1 fl">女武神的秘宝</p>
+              <p class="text2 fr">共7,294,712人关注</p>
+            </span>     
+        </span>
+      </div>
+      <a href="#">绑定畅游+，送十格背包<i class="fr">进行中</i></a>
+      <div class="e6">
+        <span class="e7">
+           <span class="opa"></span>
+             <span class="e8 clearfix">
+              <p class="text1 fl">女武神的秘宝</p>
+              <p class="text2 fr">共7,294,712人关注</p>
+            </span>     
+        </span>
+      </div>
+      <a href="#">赫尔莫斯的宝库，尼凯亚大陆奇珍异宝热卖<i class="fr">进行中</i></a>
+      <div class="e6">
+        <span class="e7">
+           <span class="opa"></span>
+             <span class="e8 clearfix">
+              <p class="text1 fl">女武神的秘宝</p>
+              <p class="text2 fr">共7,294,712人关注</p>
+            </span>     
+        </span>
+      </div>
+      <a href="#">下载手机版客户端，畅想移动互联<i class="fr">进行中</i></a>
+      <div class="e6">
+        <span class="e7">
+           <span class="opa"></span>
+             <span class="e8 clearfix">
+              <p class="text1 fl">女武神的秘宝</p>
+              <p class="text2 fr">共7,294,712人关注</p>
+            </span>     
+        </span>
+      </div>
+  
+   </div>
+</div>
+
+<!--content_4-->
+
+<div class="content_4 clearfix">
+    <div class="c_4l fl">
+        <dl class="f1">
+            <dt>快捷入口</dt>
+            <dd class="fl"><a href="#">账号管理</a></dd>
+            <dd class="fl"><a href="#">兑换中心</a></dd>
+            <dd class="fl"><a href="#">账号安全</a></dd>
+            <dd class="fl"><a href="#">畅游知道</a></dd>
+            <dd class="fl"><a href="#">BUG提交</a></dd>
+            <dd class="fl"><a href="#">客户端FAQ</a></dd>
+            <dd class="fl"><a href="#">玩家社区</a></dd>
+            <dd class="fl"><a href="#">加速器下载</a></dd>
+        </dl>
+        <a class="f2" href="#"></a>
+        <select class="f3">
+           <option>媒体合作专区</option>
+        </select>
+        <a class="f4" href="#" id="f4">
+          <img src="soulimg/examen.jpg" alt="" />
+        </a>
+    </div>
+    <div class="c_4m fl" >
+       <h2 class="f5">玩家交流</h2>
+       <div id="f6">
+         <ul class="f6 clearfix" >
+           <li class="active"><a href="javascript:;">玩家攻略</a></li>
+           <li class=""><a href="javascript:;">论坛热帖</a></li>
+           <li class=""><a href="javascript:;">社区精华</a></li>
+           <li class=""><a href="javascript:;">更多信息></a></li>
+         </ul>
+         <div class="f10 clearfix" style="display: block;">
+            <span class="f11 fl">
+            </span>
+            <span class="f12 fl">
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">称号：发现森林之秘 任务全程攻略</a>
+               <a href="#">屌丝逆袭 大神成长计划开启</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">阻止可萨特复活【英雄】成就攻略！</a>
+               <a href="#">独家攻略！灵魂回响效率冲级攻略</a>
+               <a href="#">灵魂回响生活技能玩法介绍（一）</a>
+               <a href="#">灵魂回响生活技能玩法介绍（二）</a>
+            </span>
+         </div>
+         <div class="f10 clearfix" >
+            <span class="f11 fl">
+            </span>
+            <span class="f12 fl">
+               <a href="#">灵魂回响生活技能玩法介绍（二）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">称号：发现森林之秘 任务全程攻略</a>
+               <a href="#">阻止可萨特复活【英雄】成就攻略！</a>
+               <a href="#">灵魂回响生活技能玩法介绍（一）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">屌丝逆袭 大神成长计划开启</a>
+               <a href="#">独家攻略！灵魂回响效率冲级攻略</a>
+               
+               
+            </span>
+         </div>
+         <div class="f10 clearfix">
+            <span class="f11 fl">
+            </span>
+             <span class="f12 fl">
+               
+               <a href="#">灵魂回响生活技能玩法介绍（一）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">屌丝逆袭 大神成长计划开启</a>
+               <a href="#">独家攻略！灵魂回响效率冲级攻略</a>
+               <a href="#">灵魂回响生活技能玩法介绍（二）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               <a href="#">称号：发现森林之秘 任务全程攻略</a>
+               <a href="#">阻止可萨特复活【英雄】成就攻略！</a>
+               
+            </span>
+         </div>
+         <div class="f10 clearfix">
+            <span class="f11 fl">
+            </span>
+             <span class="f12 fl">
+               <a href="#">灵魂回响生活技能玩法介绍（二）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               
+               <a href="#">屌丝逆袭 大神成长计划开启</a>
+               <a href="#">独家攻略！灵魂回响效率冲级攻略</a>
+               <a href="#">称号：发现森林之秘 任务全程攻略</a>
+               <a href="#">阻止可萨特复活【英雄】成就攻略！</a>
+               <a href="#">灵魂回响生活技能玩法介绍（一）</a>
+               <a href="#">生活技能之烹饪技能详细解读</a>
+               
+            </span>
+         </div>
+       </div>
+       <div id="f7">
+         <h2 class="f13">媒体专区</h2>
+       <ul class="f116 clearfix">
+         <li class="active"><a href="javascript:;">17173</a></li>
+         <li class=""><a href="javascript:;">新浪爱问</a></li>
+         <li class=""><a href="javascript:;">太平洋游戏</a></li>
+         <li class=""><a href="javascript:;">更多信息></a></li>
+       </ul>
+       <div class="f110 clearfix" style="display: block;">
+          <span class="f112 fl">
+          </span>
+          <span class="f12 fl">
+             <a href="#">竞技场上线！进入PVP激斗时代！</a>
+             <a href="#">4月8日大版开启 新职业术士魔神天降</a>
+             <a href="#">《灵魂回响》部分服务器异常公告</a>
+             <a href="#">《灵魂回响》战场第二赛季开启预告</a>
+             <a href="#">萌属性报表！大神手绘同人图大放送</a>
+             <a href="#">副职攻略-入门级</a>
+             <a href="#">关于游戏里的一些问题【扫盲向】</a>
+             <a href="#">冰法PVE攻略</a>
+          </span>
+       </div>
+       <div class="f110 clearfix">
+          <span class="f112 fl">
+          </span>
+          <span class="f12 fl">
+             <a href="#">竞技场上线！进入PVP激斗时代！</a>
+             <a href="#">4月8日大版开启 新职业术士魔神天降</a>
+             
+             <a href="#">关于游戏里的一些问题【扫盲向】</a>
+             <a href="#">冰法PVE攻略</a>
+             <a href="#">《灵魂回响》部分服务器异常公告</a>
+             <a href="#">《灵魂回响》战场第二赛季开启预告</a>
+             <a href="#">萌属性报表！大神手绘同人图大放送</a>
+             <a href="#">副职攻略-入门级</a>
+          </span>
+       </div>
+       <div class="f110 clearfix">
+          <span class="f112 fl">
+          </span>
+          <span class="f12 fl">
+            
+             <a href="#">《灵魂回响》战场第二赛季开启预告</a>
+             <a href="#">萌属性报表！大神手绘同人图大放送</a>
+             <a href="#">副职攻略-入门级</a>
+             <a href="#">关于游戏里的一些问题【扫盲向】</a>
+             <a href="#">冰法PVE攻略</a>
+              <a href="#">竞技场上线！进入PVP激斗时代！</a>
+             <a href="#">4月8日大版开启 新职业术士魔神天降</a>
+             <a href="#">《灵魂回响》部分服务器异常公告</a>
+          </span>
+       </div>
+       <div class="f110 clearfix">
+          <span class="f112 fl">
+          </span>
+          <span class="f12 fl">
+             <a href="#">《灵魂回响》部分服务器异常公告</a>
+             <a href="#">《灵魂回响》战场第二赛季开启预告</a>
+             <a href="#">萌属性报表！大神手绘同人图大放送</a>
+             <a href="#">竞技场上线！进入PVP激斗时代！</a>
+             <a href="#">4月8日大版开启 新职业术士魔神天降</a>
+             
+             <a href="#">副职攻略-入门级</a>
+             <a href="#">关于游戏里的一些问题【扫盲向】</a>
+             <a href="#">冰法PVE攻略</a>
+          </span>
+       </div>
+       </div>
+       
+    </div>
+   <div class="c_4r fl">
+     <h2 class="f14">游戏资料</h2>
+     <ul class="f15">
+        <li class="f16 clearfix">
+           <a class="f17 fl" href="#">新手入门<i></i></a>
+           <ul class="f18 fl">
+              <li class="fl"><a class="f19" href="#">注册账号丨</a></li>
+              <li class="fl"><a class="f19" href="#">下载游戏丨</a></li>
+              <li class="fl"><a class="f19" href="#">登录游戏</a></li>
+           </ul>
+           
+           </li>
+       <li class="f16 clearfix">
+           <a class="f17 fl" href="#">职业介绍<i></i></a>
+           <ul class="f18 fl">
+              <li class="fl"><a class="f19" href="#">刺客丨</a></li>
+              <li class="fl"><a class="f19" href="#">神射手丨</a></li>
+              <li class="fl"><a class="f19" href="#">守护者丨</a></li>
+              <li class="fl"><a class="f19" href="#">魔法师</a></li>
+           </ul>
+           
+           </li>
+        <li class="f16 clearfix">
+           <a class="f20 fl" href="#">旅行者日记<i></i></a>
+           <ul class="f18 fl">
+              <li class="fl"><a class="f19" href="#">雷班斯丨</a></li>
+              <li class="fl"><a class="f19" href="#">弗尔图斯丨</a></li>
+              <li class="fl"><a class="f19" href="#">赫里亚纳</a></li>
+           </ul>
+           
+           </li>
+         <li class="f16 clearfix">
+           <a class="f20 fl" href="#">神谕者指引<i></i></a>
+           <ul class="f18 fl">
+              <li class="fl"><a class="f19" href="#">1-19级丨</a></li>
+              <li class="fl"><a class="f19" href="#">20-39级丨</a></li>
+              <li class="fl"><a class="f19" href="#">40-49级</a></li>
+           </ul>
+           
+           </li>
+        <li><a class="f21" href="#">进入资料站</a></li>
+     </ul>
+     <h2 class="f22">视觉欣赏</h2>
+     <ul class="f23 clearfix">
+         <li class="fl f24"><a href="#">17173</a></li>
+         <li class="fl f25"><a href="#">新浪爱问</a></li>
+         
+         <li class="fl f26"><a href="#">更多信息></a></li>
+       </ul>
+       <ul class="f27 clearfix">
+          <li class="fl"><a class="f28" href="#"></a></li>
+          <li class="fl"><a class="f29" href="#"></a></li>
+          <li class="fl"><a class="f30" href="#"></a></li>
+          <li class="fl"><a class="f31" href="#"></a></li>
+       </ul>
+    
+    </div>
+</div>
+<!--bottom-->
+<p class="bottom_1">健康游戏忠告</p>
+<p class="bottom_2">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防上当受骗。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+<p class="bottom_3">本游戏适合18周岁以上的成年人用户，未满18周岁的未成年用户请在家长的监督下进行游戏。</p>
+
+</div><!--中间背景图片的结尾-->
+ 
+</div><!--大背景图片的结尾-->
+<p class="bottom_4"></p>
+<div class="bottom_5">
+   <div class="bottom_6 clearfix">
+       <div class="bottom_7 fl"></div>
+       <div class="bottom_8 fl">
+            <p class="bottom_9">北京畅游时代数码技术有限公司版权所有COPYRIGHT © 2011CHANGYOU.COMLIMITED.ALL RIGHTS RESERVED.法律声明丨联系我们</p>
+          <p class="bottom_10">京网文[2011]0260-093号丨京ICP证：070525号</p>
+       </div>
+   </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
