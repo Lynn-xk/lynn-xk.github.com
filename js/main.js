@@ -20,7 +20,8 @@ window.onload = function(){
 			oImg.src = 'https://lynn-xk.github.io/image/'+imgArr[k]+'.jpg';
 			oImg.onload = function(){
 				num--;
-				console.log(num)
+				oNum.innerHTML = (((9-num)/9)*100).toFixed(2)+'%';
+				console.log(oName.innerHTML)
 				if(num>=4 && num<9){
 					oName.style.background = 'url(image/redname.png)';
 					oName.style.opacity = (num-4)/5;
