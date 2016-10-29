@@ -11,42 +11,53 @@ window.onload = function(){
 	var oEng1 = document.querySelector('.english1');
 	var oEng2 = document.querySelector('.english2');
 	var oCent = document.querySelector('#center')
-	var num = 450;
+	var num = 9;
 	var loadtimer = null;
-
-	loadtimer = setInterval(function(){
-		num--;
-		if(num>=250 && num<450){
-			oName.style.background = 'url(image/redname.png)';
-			// oEng1.style.background = 'url(image/redenglish1.png)';
-			// oEng2.style.background = 'url(image/redenglish2.png)';
-			// oEng1.style.width = (450-num)*(482/200)+'px';
-			oName.style.opacity = (num-250)/200;
-			oEng1.style.opacity = (450-num)/200;
-			// oEng2.style.opacity = (num-250)/200;
+	var imgArr = ['bk','hg','st','tk','xk1','xk3','xk4','xk7','xk8'];
+	// loadtimer = setInterval(function(){
+		for(var k = 0;k<imgArr.length;k++){
+			var oImg = new Image();
+			oImg.src = 'https://lynn-xk.github.io/image/'+imgArr[k]+'.jpg';
+			oImg.onload = function(){
+				num--;
+				console.log(num)
+				if(num>=4 && num<9){
+					oName.style.background = 'url(image/redname.png)';
+					oName.style.opacity = (num-4)/5;
+					oEng1.style.opacity = (9-num)/5;
+				}
+				if(num >=0 && num<4){
+					oName.style.background = 'url(image/greenname.png)';
+					oName.style.opacity = (num)/4;
+					oEng2.style.opacity = (4-num)/4;
+				}
+				if(num == 0){
+					oLoadding.style.display = 'none';
+					oFather.style.display = 'block';
+					oHead.style.animation='hc 0.8s cubic-bezier(1, 2.41, 0.24,-0.45)';
+					backLoad();
+				}
+			}
+			oImg.onerror = function(){
+				alert('请重新加载');
+			}
 		}
-		if(num >=0 && num<250){
-			oName.style.background = 'url(image/greenname.png)';
-			// oEng1.style.background = 'url(image/greenenglish.png)';
-			// oEng2.style.background = 'url(image/greenenglish2.png)';
-			// oEng2.style.width = (250-num)*(482/250)+'px';
-			oName.style.opacity = (num)/250;
-			// oEng1.style.opacity = (num)/250;
-			oEng2.style.opacity = (250-num)/250;
-		}
+		
+		
+		
 		// if(num>0 && num<=450){
 		// 	oEng1.style.opacity = (450-num)/450;
 		// }
 		
-		if(num == -100){
-			clearInterval(loadtimer);
-			oLoadding.style.display = 'none';
-			oFather.style.display = 'block';
-			oHead.style.animation='hc 0.8s cubic-bezier(1, 2.41, 0.24,-0.45)';
-			backLoad();
-		}
+		// if(num == -100){
+		// 	clearInterval(loadtimer);
+		// 	oLoadding.style.display = 'none';
+		// 	oFather.style.display = 'block';
+		// 	oHead.style.animation='hc 0.8s cubic-bezier(1, 2.41, 0.24,-0.45)';
+		// 	backLoad();
+		// }
 
-	},0.1)
+	// },0.1)
 
 	function backLoad(){
 		//回到顶部
