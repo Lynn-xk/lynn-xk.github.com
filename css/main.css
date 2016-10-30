@@ -981,3 +981,126 @@ video{
 	height:100%;
 	display: none;
 }
+.dbox1{ width:240px; 
+	  height:240px;
+	  /*background:red;*/ 
+	  /*margin:100px auto;*/ 
+	  transform:perspective(800px) rotateY(-60deg) rotateX(30deg); 
+	  position:absolute;
+	  left:100px;
+	  top:50px; 
+	  transform-style:preserve-3d; 
+	  /*transition:4s all ease;*/
+	}
+.dbox1 span{ width:100%; 
+	         height:100%; 
+	         position:absolute;
+	         background:url(../image/wenke1.jpg) no-repeat;
+	         background-size:100%;
+	 }
+.dbox2{ width:240px; 
+	  height:240px;
+	  /*background:red;*/ 
+	  /*margin:100px auto;*/ 
+	  transform:perspective(800px) rotateY(60deg) rotateX(30deg); 
+	  position:absolute;
+	  left:600px;
+	  top:400px; 
+	  transform-style:preserve-3d; 
+	  /*transition:4s all ease;*/
+	}
+.dbox2 span{ width:100%; 
+	         height:100%; 
+	         position:absolute;
+	         background:url(../image/tim.jpg) no-repeat;
+	         background-size:100%;
+	 }
+.dbox3{ width:240px; 
+	  height:240px;
+	  /*background:red;*/ 
+	  /*margin:100px auto;*/ 
+	  transform:perspective(800px) rotateY(-60deg) rotateX(-60deg); 
+	  position:absolute;
+	  right:250px;
+	  top:-50px; 
+	  transform-style:preserve-3d;
+	  /*transition:4s all ease;*/
+	}
+.dbox3 span{ width:100%; 
+	         height:100%; 
+	         position:absolute;
+	         background:url(../image/caro.jpg) no-repeat;
+	         background-size:100%;
+	 }	 	 
+.dbox1 .dfront{ /*background:url(../image/manu.gif); */
+	    transform:translateZ(120px);
+	  }
+.dbox2 .dfront{ /*background:url(../image/manu.gif); */
+	    transform:translateZ(120px);
+	  }
+.dbox3 .dfront{ /*background:url(../image/manu.gif); */
+	    transform:translateZ(120px);
+	  }
+.dfront a{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.dback{ /*background:yellow;*/ 
+	   transform:translateZ(-120px);
+	 }
+.dleft{/* background:green;*/ 
+	   transform:translateX(-120px) rotateY(90deg);
+	 }
+.dright{ /*background:purple; */
+	    transform:translateX(120px) rotateY(90deg);
+	  }
+.dtop{/* background:blue; */
+	  transform:translateY(-120px) rotateX(90deg);
+	}
+.dbottom{ 
+	 /*background:pink; */
+	 transform:translateY(120px) rotateX(90deg);
+	}
+/*.dbox1:hover{ transform:perspective(800px) rotateY(-360deg) rotateX(360deg);}*/
+.footcont{
+	width:707px;
+	height:350px;
+	padding-top: 200px;
+	position:absolute;
+	left:320px;
+	top:-80px;
+	background:url(../image/footcot.png);
+	color:rgba(34,30,45,1);
+	font-weight: bold;
+	font-size: 26px;
+	/*opacity:0;*/
+}
+.footcont p{
+	line-height: 60px;
+	margin-left: 150px;
+	position:relative;
+}
+.footcont p span{
+	display: inline-block;
+	position: absolute;
+	left:150px;
+}
+.foott{
+	width:100%;
+	text-align:center;
+	line-height: 50px;
+	color:rgba(34,30,45,1);
+}
+.footb{
+	width:100%;
+	text-align:right;
+	line-height: 50px;
+	padding-right: 20px;
+	color:rgba(34,30,45,1);
+	position:absolute;
+	right:0;
+	bottom:0;
+}

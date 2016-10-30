@@ -13,7 +13,7 @@ window.onload = function(){
 	var oCent = document.querySelector('#center')
 	var num = 9;
 	var loadtimer = null;
-	var imgArr = ['bk','hg','st','tk','xk1','xk3','xk4','xk7','xk8'];
+	var imgArr = ['xk1','tk','xk7','st','xk8','bk','xk3','hg','xk4'];
 	// loadtimer = setInterval(function(){
 		for(var k = 0;k<imgArr.length;k++){
 			var oImg = new Image();
@@ -21,7 +21,7 @@ window.onload = function(){
 			oImg.onload = function(){
 				num--;
 				oNum.innerHTML = (((9-num)/9)*100).toFixed(2)+'%';
-				console.log(oName.innerHTML)
+				
 				if(num>=4 && num<9){
 					oName.style.background = 'url(image/redname.png)';
 					oName.style.opacity = (num-4)/5;
@@ -143,11 +143,11 @@ window.onload = function(){
 				oIos.style.right = 160+'px';
 				oIos.style.transition='1s right cubic-bezier(0.35, 0.88, 0.71, 1.68)';
 				oPccir.style.opacity = '0.8';
-				oPccir.style.transition = '3s opacity ease';
+				oPccir.style.transition = '5s opacity ease';
 				oAncir.style.opacity = '0.8';
-				oAncir.style.transition = '3s opacity ease';
+				oAncir.style.transition = '5s opacity ease';
 				oIoscir.style.opacity = '0.8';
-				oIoscir.style.transition = '3s opacity ease';
+				oIoscir.style.transition = '5s opacity ease';
 			}
 			 if(navtop>1646 && navtop<2469){
 			 	oFix.style.background='url(image/bk.jpg) no-repeat';
@@ -261,7 +261,77 @@ window.onload = function(){
 				}
 				
 			}
-
+			var oDbox1 = document.querySelector('.dbox1');
+			var oDfront1 = oDbox1.children[0];
+			var oDbox2 = document.querySelector('.dbox2');
+			var oDfront2 = oDbox2.children[0];
+			var oDbox3 = document.querySelector('.dbox3');
+			var oDfront3 = oDbox3.children[0];
+			oDbox1.onmouseover = function(){
+				oDbox1.style.transform='perspective(800px) rotateY(-360deg) rotateX(360deg)';
+				oDbox1.style.transition = '4s all ease';
+				oDbox1.addEventListener('transitionend',function(){
+					oDfront1.style.background = 'url(image/wenke1.gif)'
+				},false)
+				// oDbox1.removeEventListener('transitionend',function(){
+				// 	oDfront.style.background = 'url(image/manu.gif)'
+				// },false)
+			}
+			
+			oDbox1.onmouseout = function(){
+				oDbox1.style.transition = '4s all ease';
+				oDbox1.style.transform='perspective(800px) rotateY(-60deg) rotateX(30deg)';
+				oDfront1.style.background = 'url(image/wenke1.jpg)';
+					oDfront1.style.backgroundSize = '240px 240px';
+				oDbox1.addEventListener('transitionend',function(){
+					oDfront1.style.background = 'url(image/wenke1.jpg)';
+					oDfront1.style.backgroundSize = '240px 240px';
+				},false)
+				// oDbox1.removeEventListener('transitionend',function(){
+				// 	oDfront.style.background = 'url(image/manu.jpg)';
+				// oDfront.style.backgroundSize = '240px 240px';
+				// },false)
+			}
+			oDbox2.onmouseover = function(){
+				oDbox2.style.transform='perspective(800px) rotateY(-360deg) rotateX(360deg)';
+				oDbox2.style.transition = '4s all ease';
+				oDbox2.addEventListener('transitionend',function(){
+					oDfront2.style.background = 'url(image/tim.gif)'
+				},false)
+				
+			}
+			
+			oDbox2.onmouseout = function(){
+				oDbox2.style.transition = '4s all ease';
+				oDbox2.style.transform='perspective(800px) rotateY(60deg) rotateX(30deg)';
+				oDfront2.style.background = 'url(image/tim.jpg)';
+					oDfront2.style.backgroundSize = '240px 240px';
+				oDbox2.addEventListener('transitionend',function(){
+					oDfront2.style.background = 'url(image/tim.jpg)';
+					oDfront2.style.backgroundSize = '240px 240px';
+				},false)
+			
+			}
+			oDbox3.onmouseover = function(){
+				oDbox3.style.transform='perspective(800px) rotateY(-360deg) rotateX(360deg)';
+				oDbox3.style.transition = '4s all ease';
+				oDbox3.addEventListener('transitionend',function(){
+					oDfront3.style.background = 'url(image/caro.gif)'
+				},false)
+			
+			}
+			
+			oDbox3.onmouseout = function(){
+				oDbox3.style.transition = '4s all ease';
+				oDbox3.style.transform='perspective(800px) rotateY(-60deg) rotateX(-60deg)';
+				oDfront3.style.background = 'url(image/caro.jpg)';
+					oDfront3.style.backgroundSize = '240px 240px';
+				oDbox3.addEventListener('transitionend',function(){
+					oDfront3.style.background = 'url(image/caro.jpg)';
+					oDfront3.style.backgroundSize = '240px 240px';
+				},false)
+		
+			}
 
 
     //backLoad函数结尾
